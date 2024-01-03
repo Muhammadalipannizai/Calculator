@@ -1,0 +1,50 @@
+*::before, *::after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: linear-gradient(to right,  #FF6347,#9ACD32, #1E90FF);
+}
+.container-grid{
+    display: grid;
+    margin-top: 2.5rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+.output{
+    padding: .75rem;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .55);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.span {
+    grid-column: span 2;
+}
+.previous-digit{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.current-digit{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.container-grid > button{
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+.container-grid > button:hover,
+.container-grid > button:focus{
+            background-color: rgba(155, 255, 255, .59);
+}
+
